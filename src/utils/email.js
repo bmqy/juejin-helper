@@ -1,11 +1,12 @@
 const nodemailer = require('nodemailer')
-const { EMAIL, SMTP_HOST, AUTHORIZATION_CODE } = require('../ENV.js')
+const { EMAIL, SMTP_HOST, SMTP_SSL, AUTHORIZATION_CODE } = require('../ENV.js')
 
 const email = async ({ title = '', content = '' } = {}) => {
   try {
     const suffix = /@(?<suffix>.*)/.exec(EMAIL).groups.suffix
     const options = {
       host: SMTP_HOST,
+      secure: SMTP_SSL?.toLowerCase() === 'true',
       auth: {
         user: EMAIL,
         pass: AUTHORIZATION_CODE,
