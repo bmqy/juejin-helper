@@ -3,7 +3,6 @@ const { EMAIL, SMTP_HOST, SMTP_SSL, AUTHORIZATION_CODE } = require('../ENV.js')
 
 const email = async ({ title = '', content = '' } = {}) => {
   try {
-    console.log(SMTP_SSL?.toLowerCase() === 'true')
     const suffix = /@(?<suffix>.*)/.exec(EMAIL).groups.suffix
     const options = {
       host: SMTP_HOST,

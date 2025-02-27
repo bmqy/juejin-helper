@@ -6,8 +6,7 @@ const { EMAIL, SMTP_HOST, AUTHORIZATION_CODE, PUSHPLUS_TOKEN, DINGDING_WEBHOOK, 
 
 const pushMessage = ({ type, message }) => {
   console.log(message)
-
-  console.log(EMAIL, SMTP_HOST, AUTHORIZATION_CODE)
+  
   EMAIL && 
     SMTP_HOST &&
     AUTHORIZATION_CODE &&
