@@ -38,6 +38,8 @@
 | --- | --- | --- |
 | `COOKIE` | 稀土掘金用户`cookie` | 是 |
 | `EMAIL` | 邮箱地址 | 否 |
+| `SMTP_HOST` | 邮箱`SMTP`域名 | 否（使用邮箱时必填） |
+| `SMTP_SSL` | 邮箱`SMTP`启用`SSL` | 否 |
 | `AUTHORIZATION_CODE` | 邮箱`POP3/SMTP`服务授权码 | 否 |
 | `PUSHPLUS_TOKEN` | 微信公众号`pushplus` `token` | 否 |
 | `DINGDING_WEBHOOK` | 钉钉机器人`Webhook` | 否 |
